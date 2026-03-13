@@ -1,0 +1,8 @@
+---
+const { role, description, icon } = Astro.props;
+---
+<div class="p-6 border-l-2 border-white/10 hover:border-[--color-neon-blue] hover:bg-white/5 transition-all group">
+  <div class="text-[--color-neon-blue] mb-2 text-2xl group-hover:scale-110 transition-transform">{icon}</div>
+  <h4 class="text-white font-bold uppercase tracking-widest">{role}</h4>
+  <p class="text-sm text-slate-500 mt-2">{description}</p>
+</div>

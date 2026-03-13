@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EvolutionCard from '../components/EvolutionCard.astro';
+import '../styles/globals.css';
+import TeamMember from '../components/TeamMember.astro';
+---
+
+<Layout title="Tech It ISII">
+  <div class="scanline pointer-events-none"></div>
+
+  <section class="h-screen flex flex-col items-center justify-center relative px-4">
+    <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
+    
+    <div class="text-center z-10">
+      <p class="text-[--color-neon-cyan] font-mono tracking-[0.5em] mb-4 animate-pulse">Tech It ISII</p>
+      <h1 class="text-7xl md:text-9xl font-bold text-white mb-6 leading-none">
+        TITAN <span class="text-transparent bg-clip-text bg-linear-to-r from-[--color-neon-cyan] to-[--color-neon-purple]">SERIES</span>
+      </h1>
+      <p class="max-w-xl mx-auto text-slate-400 text-lg mb-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a href="#evolution" class="px-8 py-3 bg-[--color-neon-cyan] text-white font-bold uppercase hover:skew-x-12 transition-transform">Explore Evolution</a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-10 left-10 text-[10px] text-slate-600 hidden md:block">
+      LAT: 17.5286° N<br/>LONG: 9.1820° E
+    </div>
+  </section>
+
+  <section id="evolution" class="container mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-20 border-l-4 border-[--color-neon-cyan] pl-6 italic">History.log</h2>
+
+    <EvolutionCard 
+      year="2026" 
+      name="Titan-V3: Genesis" 
+      specs={["Lorem ipsum", "Tempor incididunt", "Ut labore et dolore"]}
+      image="/robot2026.jpg" 
+      side="right"
+    />
+
+    <EvolutionCard 
+      year="2025" 
+      name="Titan-V2: Stride" 
+      specs={["Lorem ipsum", "Tempor incididunt", "Ut labore et dolore"]}
+      image="/robot2025.jpg" 
+      side="left"
+    />
+
+    <EvolutionCard 
+      year="2024" 
+      name="Titan-V1: Origins" 
+      specs={["Lorem ipsum", "Tempor incididunt", "Ut labore et dolore"]}
+      image="/robot2024.jpg" 
+      side="right"
+    />
+  </section>
+
+  	<section class="container mx-auto px-6 py-24 border-t border-white/5">
+  		<h2 class="text-4xl font-bold mb-16 font-orbitron text-center">Department.sys</h2>
+  		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    		<TeamMember role="Software" description="Java-based autonomous routines and neural network training." icon="</>" />
+    		<TeamMember role="Electronics" description="Circuit design and sensor integration for real-time feedback." icon="⚡" />
+   			<TeamMember role="Mechanics" description="CAD modeling and 3D printing of structural components." icon="⚙️" />
+    		<TeamMember role="Marketing" description="Sponsorship management and team branding." icon="📢" />
+  		</div>
+	</section>
+</Layout>
+
+<script>
+  // Intersection Observer
+  const observerOptions = { threshold: 0.2 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        entry.target.classList.remove('opacity-0', 'translate-y-10');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+<div id="grid-bg" class="fixed inset-0 pointer-events-none opacity-20 z-[-1]" 
+     style="background-image: radial-gradient(circle at 2px 2px, #00d4ff 1px, transparent 0); background-size: 40px 40px;">
+</div>
+
+<script>
+  document.addEventListener('mousemove', (e) => {
+    const grid = document.getElementById('grid-bg');
+    if (grid) {
+      const x = (e.clientX / window.innerWidth) * 20;
+      const y = (e.clientY / window.innerHeight) * 20;
+      grid.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  });
+</script>

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=JetBrains+Mono:wght@300;500&display=swap');
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-neon-blue: #00d4ff;
+  --color-neon-green: #39ff14;
+  --color-dark-surface: #0a0a0c;
+}
+
+@layer base {
+  body {
+    @apply bg-[--color-dark-surface] text-slate-300 font-mono selection:bg-[--color-neon-blue] selection:text-black;
+  }
+}
+
+/* Scanline Effect*/
+.scanline {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 242, 255, 0.1);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  animation: scanline 6s linear infinite;
+}
+
+@keyframes scanline {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
