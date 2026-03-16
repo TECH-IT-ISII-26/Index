@@ -157,3 +157,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1500);
   });
 });
+
+
+//Easster egg
+const EasterEggTrigger = document.getElementById('EasterEgg-trigger');
+let isActive = true;
+
+EasterEggTrigger.addEventListener('click', () => {
+  if (isActive) {
+    EasterEggTrigger.textContent = 'No bitches anymore =,)';
+    EasterEggTrigger.classList.add('EasterEgg-active');
+  } else {
+    EasterEggTrigger.textContent = 'No bitches?';
+    EasterEggTrigger.classList.remove('EasterEgg-active');
+  }
+  
+  // Piccolo effetto "pop" extra via JS
+  EasterEggTrigger.style.transform = 'scale(0.8)';
+  setTimeout(() => {
+    EasterEggTrigger.style.transform = isActive ? 'scale(1.3) rotate(10deg)' : 'scale(1)';
+  }, 50);
+
+  isActive = !isActive;
+});

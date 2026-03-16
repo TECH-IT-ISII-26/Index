@@ -295,3 +295,32 @@ a { text-decoration: none; color: inherit; }
   * { cursor: auto; }
   .cursor-dot, .cursor-ring { display: none; }
 }
+
+
+/*Easter egg */
+.easter-egg-container {
+  margin-top: 1rem;
+  user-select: none; /* Impedisce la selezione del testo fastidiosa al click */
+}
+
+.EasterEgg-text {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block;
+}
+
+.EasterEgg-text:hover {
+  color: var(--cyan);
+  transform: scale(1.1);
+}
+
+/* Classe che verrà aggiunta via JS */
+.EasterEgg-active {
+  color: var(--orange) !important;
+  font-weight: bold;
+  transform: scale(1.3) rotate(10deg);
+  text-shadow: 0 0 8px rgba(255, 107, 53, 0.5);
+}
