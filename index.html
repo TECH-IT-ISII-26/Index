@@ -9,11 +9,8 @@
 </head>
 <body>
 
-  <!-- CURSOR FOLLOWER -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- NOISE OVERLAY -->
   <div class="noise-overlay"></div>
 
   <!-- NAV -->
@@ -32,7 +29,7 @@
       <li><a href="#stagioni" class="nav-link" data-text="STAGIONI">SEASON</a></li>
       <li><a href="#contatti" class="nav-link cta-nav" data-text="CONTATTI">CONTACT US</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -126,48 +123,37 @@
   <section class="robot section" id="robot">
     <div class="container">
       <div class="section-label">// 02 — OUR ROBOT</div>
-      <h2 class="section-title center">
-        Meet <em>APEX</em>
-      </h2>
+      <h2 class="section-title center">Meet <em>APEX</em></h2>
       <div class="robot-showcase">
         <div class="robot-display">
           <div class="robot-frame">
             <div class="robot-placeholder">
               <div class="robot-svg-wrapper">
                 <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="robot-svg">
-                  <!-- Body -->
                   <rect x="50" y="60" width="100" height="90" rx="8" fill="url(#bodyGrad)" stroke="#00f0ff" stroke-width="1.5"/>
-                  <!-- Head -->
                   <rect x="65" y="30" width="70" height="40" rx="6" fill="url(#headGrad)" stroke="#ff6b35" stroke-width="1.5"/>
-                  <!-- Eyes -->
                   <circle cx="85" cy="50" r="8" fill="#00f0ff" class="robot-eye"/>
                   <circle cx="115" cy="50" r="8" fill="#00f0ff" class="robot-eye"/>
                   <circle cx="85" cy="50" r="4" fill="#001a2e"/>
                   <circle cx="115" cy="50" r="4" fill="#001a2e"/>
-                  <!-- Arms -->
                   <rect x="20" y="70" width="25" height="12" rx="4" fill="#1a2040" stroke="#7c3aed" stroke-width="1"/>
                   <rect x="155" y="70" width="25" height="12" rx="4" fill="#1a2040" stroke="#7c3aed" stroke-width="1"/>
-                  <!-- Wheels -->
                   <circle cx="70" cy="165" r="16" fill="#1a2040" stroke="#00f0ff" stroke-width="2"/>
                   <circle cx="130" cy="165" r="16" fill="#1a2040" stroke="#00f0ff" stroke-width="2"/>
                   <circle cx="70" cy="165" r="7" fill="#00f0ff" opacity="0.3"/>
                   <circle cx="130" cy="165" r="7" fill="#00f0ff" opacity="0.3"/>
-                  <!-- Body details -->
                   <rect x="65" y="80" width="70" height="3" rx="1.5" fill="#00f0ff" opacity="0.5"/>
                   <rect x="65" y="90" width="50" height="3" rx="1.5" fill="#7c3aed" opacity="0.6"/>
                   <rect x="75" y="105" width="50" height="30" rx="4" fill="#0a1628" stroke="#00f0ff" stroke-width="1" opacity="0.8"/>
-                  <!-- Screen lines -->
                   <rect x="80" y="110" width="40" height="2" rx="1" fill="#00f0ff" opacity="0.7"/>
                   <rect x="80" y="116" width="30" height="2" rx="1" fill="#00f0ff" opacity="0.5"/>
                   <rect x="80" y="122" width="35" height="2" rx="1" fill="#ff6b35" opacity="0.6"/>
                   <defs>
                     <linearGradient id="bodyGrad" x1="50" y1="60" x2="150" y2="150" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#0f1e3d"/>
-                      <stop offset="1" stop-color="#1a2a50"/>
+                      <stop stop-color="#0f1e3d"/><stop offset="1" stop-color="#1a2a50"/>
                     </linearGradient>
                     <linearGradient id="headGrad" x1="65" y1="30" x2="135" y2="70" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#1a2a50"/>
-                      <stop offset="1" stop-color="#0f1e3d"/>
+                      <stop stop-color="#1a2a50"/><stop offset="1" stop-color="#0f1e3d"/>
                     </linearGradient>
                   </defs>
                 </svg>
@@ -180,34 +166,13 @@
         <div class="robot-specs">
           <h3 class="specs-title">Technical Specifications</h3>
           <div class="spec-list">
-            <div class="spec-item">
-              <span class="spec-key">Chassis</span>
-              <span class="spec-val">Aluminum 6061-T6 · 18×18"</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">Motors</span>
-              <span class="spec-val">4× REV HD Hex · 312 RPM</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">Drive Train</span>
-              <span class="spec-val">Mecanum Wheels 4WD</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">Controller</span>
-              <span class="spec-val">REV Control Hub v1.1</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">Programming Language</span>
-              <span class="spec-val">Java · FTC SDK</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">Autonomous</span>
-              <span class="spec-val">AprilTags + OpenCV</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-key">Weight</span>
-              <span class="spec-val">5.1 kg</span>
-            </div>
+            <div class="spec-item"><span class="spec-key">Chassis</span><span class="spec-val">Aluminum 6061-T6 · 18×18"</span></div>
+            <div class="spec-item"><span class="spec-key">Motors</span><span class="spec-val">4× REV HD Hex · 312 RPM</span></div>
+            <div class="spec-item"><span class="spec-key">Drive Train</span><span class="spec-val">Mecanum Wheels 4WD</span></div>
+            <div class="spec-item"><span class="spec-key">Controller</span><span class="spec-val">REV Control Hub v1.1</span></div>
+            <div class="spec-item"><span class="spec-key">Language</span><span class="spec-val">Java · FTC SDK</span></div>
+            <div class="spec-item"><span class="spec-key">Autonomous</span><span class="spec-val">AprilTags + OpenCV</span></div>
+            <div class="spec-item"><span class="spec-key">Weight</span><span class="spec-val">5.1 kg</span></div>
           </div>
           <div class="robot-sub-features">
             <div class="feature-pill">☄️ Launching System</div>
@@ -224,144 +189,109 @@
     <div class="container">
       <div class="section-label">// 03 — OUR TEAM</div>
       <h2 class="section-title center">The Minds Behind<br><em>Our Robot</em></h2>
-      <h2>Our Students</h2>
-      <br>
+      <h2>Our Students</h2><br>
       <div class="team-grid">
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#00f0ff">AI</div>
           <h4 class="member-name">Alessandro Imberti</h4>
           <span class="member-role">Team Captain · Software Eng.</span>
-          <div class="member-skills">
-            <span>Java</span><span>Developer</span>
-          </div>
+          <div class="member-skills"><span>Java</span><span>Developer</span></div>
         </div>
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#ff6b35">KH</div>
           <h4 class="member-name">Kabir Husejnovic</h4>
           <span class="member-role">Lead Building Eng. · CAD</span>
-          <div class="member-skills">
-            <span>3D Print</span><span>Automation</span>
-          </div>
+          <div class="member-skills"><span>3D Print</span><span>Automation</span></div>
         </div>
-        <a href="https://itslucaa.is-a.dev" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+        <a href="https://itslucaa.is-a.dev" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
           <div class="member-card" data-tilt>
             <div class="member-avatar" style="--c:#7c3aed">LIM</div>
             <h4 class="member-name">Luca Illica Magrini</h4>
             <span class="member-role">Lead Software Eng. · Vision</span>
-            <div class="member-skills">
-              <span>Husky Lens</span><span>Developer</span>
-            </div>
+            <div class="member-skills"><span>Husky Lens</span><span>Developer</span></div>
           </div>
         </a>
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#22c55e">VO</div>
           <h4 class="member-name">Vlad Oancea</h4>
           <span class="member-role">Building · Outreach</span>
-          <div class="member-skills">
-            <span>Automation</span><span>Sponsor</span>
-          </div>
+          <div class="member-skills"><span>Automation</span><span>Sponsor</span></div>
         </div>
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#f59e0b">XC</div>
           <h4 class="member-name">Xiu Chen</h4>
           <span class="member-role">Automation · Build</span>
-          <div class="member-skills">
-            <span>Mecanum Wheels</span><span>Automation</span>
-          </div>
+          <div class="member-skills"><span>Mecanum Wheels</span><span>Automation</span></div>
         </div>
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#ec4899">GC</div>
           <h4 class="member-name">Giacomo Carminati</h4>
           <span class="member-role">Design · Media</span>
-          <div class="member-skills">
-            <span>Canva</span><span>Social</span>
-          </div>
+          <div class="member-skills"><span>Canva</span><span>Social</span></div>
         </div>
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#fc0303">MO</div>
           <h4 class="member-name">Manuel Ottola</h4>
           <span class="member-role">Design · Media</span>
-          <div class="member-skills">
-            <span>Canva</span><span>Social</span>
-          </div>
+          <div class="member-skills"><span>Canva</span><span>Social</span></div>
         </div>
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#209be3">NP</div>
           <h4 class="member-name">Nikola Poplasen</h4>
           <span class="member-role">Build · Automation</span>
-          <div class="member-skills">
-            <span>GoBilda Motors</span><span>Automation</span>
-          </div>
+          <div class="member-skills"><span>GoBilda Motors</span><span>Automation</span></div>
         </div>
       </div>
       <br>
-      <h2>Our Mentors</h2>
-      <br>
+      <h2>Our Mentors</h2><br>
       <div class="team-grid">
         <div class="member-card" data-tilt>
           <div class="member-avatar" style="--c:#154fed">AP</div>
           <h4 class="member-name">Alessandro Picchi</h4>
           <span class="member-role">Dev. Mentor</span>
-          <div class="member-skills">
-            <span>Mentor</span><span>Development</span>
-          </div>
+          <div class="member-skills"><span>Mentor</span><span>Development</span></div>
         </div>
-          <div class="member-card" data-tilt>
-            <div class="member-avatar" style="--c:#ed8815">AM</div>
-              <h4 class="member-name">Ahmed Moustafa</h4>
-              <span class="member-role">Build Mentor</span>
-            <div class="member-skills">
-              <span>Mentor</span><span>Building</span>
-            </div>
-          </div>
-          <div class="member-card" data-tilt>
-            <div class="member-avatar" style="--c:#20ed15">LM</div>
-              <h4 class="member-name">Lorenzo Marchettini</h4>
-              <span class="member-role">Build Mentor</span>
-            <div class="member-skills">
-              <span>Mentor</span><span>Building</span>
-            </div>
-          </div>
-          <div class="member-card" data-tilt>
-            <div class="member-avatar" style="--c:#eded15">AA</div>
-              <h4 class="member-name">Anthony Aramini</h4>
-              <span class="member-role">Dev. Mentor</span>
-            <div class="member-skills">
-              <span>Mentor</span><span>Development</span>
-            </div>
-          </div>
-          <div class="member-card" data-tilt>
-            <div class="member-avatar" style="--c:#15edd8">MP</div>
-              <h4 class="member-name">Mattia Passafonti</h4>
-              <span class="member-role">Build Mentor</span>
-            <div class="member-skills">
-              <span>Mentor</span><span>Building</span>
-            </div>
-          </div>
-          <div class="member-card" data-tilt>
-            <div class="member-avatar" style="--c:#a122e0">FB</div>
-              <h4 class="member-name">Fabrizio Bernardi</h4>
-              <span class="member-role">Universal Mentor</span>
-            <div class="member-skills">
-              <span>Mentor</span><span>IT</span>
-            </div>
-          </div>
-          <div class="member-card" data-tilt>
-            <div class="member-avatar" style="--c:#e02228">GC</div>
-              <h4 class="member-name">Giorgio Cusimano</h4>
-              <span class="member-role">Universal Mentor</span>
-            <div class="member-skills">
-              <span>Mentor</span><span>Automation</span>
-            </div>
-          </div>
-          <div class="member-card" data-tilt>
-            <div class="member-avatar" style="--c:#229ae0">FB</div>
-              <h4 class="member-name">Franco Bricchi</h4>
-              <span class="member-role">Universal Mentor</span>
-            <div class="member-skills">
-              <span>Mentor</span><span>Automation</span>
-            </div>
-          </div>
+        <div class="member-card" data-tilt>
+          <div class="member-avatar" style="--c:#ed8815">AM</div>
+          <h4 class="member-name">Ahmed Moustafa</h4>
+          <span class="member-role">Build Mentor</span>
+          <div class="member-skills"><span>Mentor</span><span>Building</span></div>
+        </div>
+        <div class="member-card" data-tilt>
+          <div class="member-avatar" style="--c:#20ed15">LM</div>
+          <h4 class="member-name">Lorenzo Marchettini</h4>
+          <span class="member-role">Build Mentor</span>
+          <div class="member-skills"><span>Mentor</span><span>Building</span></div>
+        </div>
+        <div class="member-card" data-tilt>
+          <div class="member-avatar" style="--c:#eded15">AA</div>
+          <h4 class="member-name">Anthony Aramini</h4>
+          <span class="member-role">Dev. Mentor</span>
+          <div class="member-skills"><span>Mentor</span><span>Development</span></div>
+        </div>
+        <div class="member-card" data-tilt>
+          <div class="member-avatar" style="--c:#15edd8">MP</div>
+          <h4 class="member-name">Mattia Passafonti</h4>
+          <span class="member-role">Build Mentor</span>
+          <div class="member-skills"><span>Mentor</span><span>Building</span></div>
+        </div>
+        <div class="member-card" data-tilt>
+          <div class="member-avatar" style="--c:#a122e0">FB</div>
+          <h4 class="member-name">Fabrizio Bernardi</h4>
+          <span class="member-role">Universal Mentor</span>
+          <div class="member-skills"><span>Mentor</span><span>IT</span></div>
+        </div>
+        <div class="member-card" data-tilt>
+          <div class="member-avatar" style="--c:#e02228">GC</div>
+          <h4 class="member-name">Giorgio Cusimano</h4>
+          <span class="member-role">Universal Mentor</span>
+          <div class="member-skills"><span>Mentor</span><span>Automation</span></div>
+        </div>
+        <div class="member-card" data-tilt>
+          <div class="member-avatar" style="--c:#229ae0">FB</div>
+          <h4 class="member-name">Franco Bricchi</h4>
+          <span class="member-role">Universal Mentor</span>
+          <div class="member-skills"><span>Mentor</span><span>Automation</span></div>
         </div>
       </div>
     </div>
@@ -445,14 +375,24 @@
             <span class="btn-loading">⏳ Sending...</span>
           </button>
           <div class="form-success" id="formSuccess">
-            <!-- ✅ Message sent! We'll get back to you soon. -->
-             ❌ Oops! This feature is not available yet. Please contact us via email.
+            ❌ Oops! This feature is not available yet. Please contact us via email.
           </div>
         </form>
-        </div>
-        <br><br>
-        <span class="contact-icon">📍 Istituto Superiore di Istruzione Industriale G. Marconi</span>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.017089907172!2d9.686506776341458!3d45.04487506131897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4780dd5103c85835%3A0x78e7bf456667fbaf!2sIstituto%20Superiore%20di%20Istruzione%20Industriale%20G.%20Marconi!5e0!3m2!1sit!2sit!4v1773677823845!5m2!1sit!2sit" width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Mappa in wrapper responsive -->
+      <div class="map-wrapper">
+        <span style="display:block; padding: 0.75rem 1rem; font-size:0.85rem; color: var(--text-muted);">
+          📍 Istituto Superiore di Istruzione Industriale G. Marconi
+        </span>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.017089907172!2d9.686506776341458!3d45.04487506131897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4780dd5103c85835%3A0x78e7bf456667fbaf!2sIstituto%20Superiore%20di%20Istruzione%20Industriale%20G.%20Marconi!5e0!3m2!1sit!2sit!4v1773677823845!5m2!1sit!2sit"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Posizione ISII G. Marconi">
+        </iframe>
+      </div>
     </div>
   </section>
 
@@ -476,10 +416,8 @@
       <div class="footer-bottom">
         <span>© 2026–27 Tech It ISII #25074</span>
         <span class="footer-ftc">Built for FIRST Tech Challenge</span>
-
-        <!-- Easter egg -->
         <div class="easter-egg-container">
-            <span id="EasterEgg-trigger" class="EasterEgg-text">No bitches?</span>
+          <span id="EasterEgg-trigger" class="EasterEgg-text">No bitches?</span>
         </div>
       </div>
     </div>
