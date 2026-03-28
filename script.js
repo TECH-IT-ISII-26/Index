@@ -172,10 +172,10 @@ if (EasterEggTrigger) {
   let isActive = true;
   EasterEggTrigger.addEventListener('click', () => {
     if (isActive) {
-      EasterEggTrigger.textContent = 'No bitches anymore =,)';
+      EasterEggTrigger.textContent = 'No coffee anymore =,)';
       EasterEggTrigger.classList.add('EasterEgg-active');
     } else {
-      EasterEggTrigger.textContent = 'No bitches?';
+      EasterEggTrigger.textContent = 'plz give us coffee';
       EasterEggTrigger.classList.remove('EasterEgg-active');
     }
     EasterEggTrigger.style.transform = 'scale(0.8)';
